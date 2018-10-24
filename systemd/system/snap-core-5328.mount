@@ -1,0 +1,12 @@
+[Unit]
+Description=Mount unit for core, revision 5328
+Before=snapd.service
+
+[Mount]
+What=/var/lib/snapd/snaps/core_5328.snap
+Where=/snap/core/5328
+Type=squashfs
+Options=nodev,ro,x-gdu.hide
+
+[Install]
+WantedBy=multi-user.target
